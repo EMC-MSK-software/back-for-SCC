@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize"; 
+import { DataTypes, Model } from "sequelize"; 
 
 import sequelize from "../../../db/db.js";
 
@@ -21,15 +21,7 @@ const User = sequelize.define("users", {
         type: DataTypes.STRING,
         allowNull: true,
         unique: true,
-    },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    salt: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
+    },    
     profile: {
         type: DataTypes.STRING,        
     }
