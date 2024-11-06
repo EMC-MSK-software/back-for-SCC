@@ -17,9 +17,10 @@ router.get("/", async (req, res) => {
 
   router.post("/auth", async (req, res) => {
     try {
-      const { login, fio, mail } = req.body;
+      const { job_title, login, fio, mail } = req.body;
   
       await createUser({
+        job_title,
         login,
         fio,
         mail,        

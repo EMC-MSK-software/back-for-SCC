@@ -8,6 +8,11 @@ const User = sequelize.define("users", {
         autoIncrement: true,
         primaryKey: true,
     },
+    job_title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: false,
+    },
     login: {
         type: DataTypes.STRING,
         allowNull: true,
