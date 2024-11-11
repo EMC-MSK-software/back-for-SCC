@@ -23,3 +23,4 @@ const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
   });
   
   export default sequelize;
+  
