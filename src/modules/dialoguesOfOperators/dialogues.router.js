@@ -15,18 +15,18 @@ router.get("/", async (req, res) => {
     }
   });
 
-  router.post("/dialogue", async (req, res) => {
+  router.post("/", async (req, res) => {
     try {
       const { fio, jobTitle, dataClient, dataStatus, progress, questions } = req.body;
   
       await createDialogue({
         fio,
-		jobTitle,
-		dataClient,
-		dataStatus,
-		progress,
-		questions,      
-        profile: "dialogue",    
+		    jobTitle,
+		    dataClient,
+		    dataStatus,
+		    progress,
+		    questions,      
+        profile: "dialogues",    
       });
   
       res.status(201).send("Данные о диалоге внесены");

@@ -1,7 +1,7 @@
-import dialogueRouter from "./users.routers.js";
-import dialogue from "./models/dialoguesOfOperators.js";
+import dialogueRouter from "./dialogues.router.js";
+import Dialogue from "./models/dialoguesOfOperators.js";
 
 export {
-    dialogue, 
+    Dialogue, 
     dialogueRouter
 };

@@ -2,7 +2,7 @@ import { DataTypes, Model } from "sequelize";
 
 import sequelize from "../../../db/db.js";
 
-const Dialogue = sequelize.define("dialogue", { 
+const Dialogue = sequelize.define("dialogues", { 
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -27,7 +27,7 @@ const Dialogue = sequelize.define("dialogue", {
         allowNull: true,       
     },    
     progress: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         allowNull: true,       
     },
     questions: {

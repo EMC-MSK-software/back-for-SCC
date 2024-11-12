@@ -3,6 +3,7 @@ import cors from "cors";
 
 import sequelize from "./db/db.js";
 import { dialogueRouter } from "./modules/dialoguesOfOperators/index.js";
+import { usersRouter } from "./modules/users/index.js";
 
 const app = express();
 app.use(cors());
@@ -17,7 +18,8 @@ async function start () {
         await sequelize.authenticate();
         await sequelize.sync();
         
-        app.use(`${API}/dialogue`, dialogueRouter);               
+        app.use(`${API}/dialogues`, dialogueRouter);        
+        app.use(`${API}/users`, usersRouter);         
 
         app.listen(PORT, () => {
             console.log(`Server is running on http://localhost:${PORT}`);                                             
