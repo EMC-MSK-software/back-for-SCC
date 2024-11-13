@@ -9,21 +9,21 @@ const Dialogue = sequelize.define("dialogues", {
         primaryKey: true,
     },
     jobTitle: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(10000),
         allowNull: true,
         unique: false,
     },
     fio: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(10000),
         allowNull: false,
-        unique: true,
+        unique: false,
     },
     dataClient: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(10000),
         allowNull: true,
     },
     dataStatus: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(10000),
         allowNull: true,       
     },    
     progress: {
@@ -31,7 +31,7 @@ const Dialogue = sequelize.define("dialogues", {
         allowNull: true,       
     },
     questions: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(10000),
         allowNull: true,       
     },
     profile: {
