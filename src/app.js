@@ -17,9 +17,9 @@ async function start () {
     try {        
         await sequelize.authenticate();
         await sequelize.sync(
-        //     {
-        //     force: true
-        // }
+            {
+            force: true
+        }
     );
         
         app.use(`${API}/dialogues`, dialogueRouter);        
