@@ -22,6 +22,10 @@ const Dialogue = sequelize.define("dialogues", {
         type: DataTypes.STRING(10000),
         allowNull: true,
     },
+    subDiv: {
+        type: DataTypes.STRING(10000),
+        allowNull: true,       
+    },
     dataStatus: {
         type: DataTypes.STRING(10000),
         allowNull: true,       

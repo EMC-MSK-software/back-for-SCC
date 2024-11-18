@@ -17,12 +17,13 @@ router.get("/", async (req, res) => {
 
   router.post("/", async (req, res) => {
     try {
-      const { fio, jobTitle, dataClient, dataStatus, progress, questions } = req.body;
+      const { fio, jobTitle, dataClient, subDiv, dataStatus, progress, questions } = req.body;
   
       await createDialogue({
         fio,
 		    jobTitle,
 		    dataClient,
+        subDiv,
 		    dataStatus,
 		    progress,
 		    questions,      
