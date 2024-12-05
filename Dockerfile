@@ -1,7 +1,5 @@
 FROM node:alpine
 
-# Install bash
-
 WORKDIR /app
 
 COPY package.json package-lock.json ./
