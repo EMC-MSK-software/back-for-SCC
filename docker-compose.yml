@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: AndreyDol
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: SCC
+    networks:
+      - my_network
+
+  app:
+    image: wqqe/msk_platform:0.2
+    environment:
+      DB_HOST: postgres
+      DB_NAME: SCC
+      DB_USER: AndreyDol
+      DB_PASSWORD: 123456
+      DB_PORT: 5432
+      PORT: 5000
+    ports:
+      - "5000:5000"
+    networks:
+      - my_network
+
+networks:
+  my_network:
