@@ -57,14 +57,13 @@ const getParamsDialogues = async (params) => {
       dialoguesRecords = await Dialogue.findAll({ where: { subDiv: params.subDivList }, raw: true });
       break;
 
-    case "dataStatus":
-      dialoguesRecords = await Dialogue.findAll({ where: { dataStatus: params.dataStatus }, raw: true });
+    case "statusList":
+      dialoguesRecords = await Dialogue.findAll({ where: { dataStatus: params.statusList }, raw: true });
       break;
 
     default:
       break;
   }
-
   
   const formattedRecords = dialoguesRecords.map((record) => {
     let dialoguesSort = [];
@@ -79,15 +78,16 @@ const getParamsDialogues = async (params) => {
       dialoguesSort.push(formattedRecord);
     }
 
-    if (dialoguesSort.length != 0) {
-      return dialoguesSort.flat();
-    } else {
-      return formattedRecord;
-    }
-
+    // if (dialoguesSort.length != 0) {
+    //   return dialoguesSort;
+    // } else {
+    //   return formattedRecord;
+    // }
+    return dialoguesSort;
+    // return formattedRecord;
   });
 
-  return formattedRecords;
+  return formattedRecords.flat(2);
 }
 
 const createDialogue = async (dialogue) => {

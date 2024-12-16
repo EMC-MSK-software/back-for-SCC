@@ -21,8 +21,13 @@ services:
       POSTGRES_USER: AndreyDol
       POSTGRES_PASSWORD: 123456
       POSTGRES_DB: SCC
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
     networks:
       - my_network
 
 networks:
   my_network:
+
+volumes:
+  pgdata:
