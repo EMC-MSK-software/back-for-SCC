@@ -2,14 +2,14 @@ services:
   app:
     build: .
     environment:
-      DB_HOST: postgres
+      DB_HOST: 172.29.0.2
       DB_NAME: SCC
       DB_USER: AndreyDol
       DB_PASSWORD: 123456
       DB_PORT: 5432
       PORT: 5000
     ports:
-      - "5000:5000"
+      - "5001:5001"
     depends_on:
       - postgres
     networks:

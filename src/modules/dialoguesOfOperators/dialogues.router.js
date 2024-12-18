@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as bcrypt from "bcrypt";
+// import * as bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 import { getAllDialogues, createDialogue, getSubDivDialogues, getParamsDialogues } from "./dialogues.controllers.js";
